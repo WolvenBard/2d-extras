@@ -312,7 +312,8 @@ namespace UnityEngine
                 }
 
                 instantiatedGameObject.transform.localPosition = gameObjectTranslation + tmpMap.CellToLocalInterpolated(location + tmpMap.tileAnchor);
-                instantiatedGameObject.transform.localRotation = gameObjectRotation;
+                // TODO: This rotation is 90 degrees off for some dumb reason, and only seems to happen in the build
+                // instantiatedGameObject.transform.localRotation = gameObjectRotation;
                 instantiatedGameObject.transform.localScale = gameObjectScale;
             }
 
